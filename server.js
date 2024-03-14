@@ -1,13 +1,12 @@
-const http = require('http')
-const fs = require('fs')
+const express = require('express')
+const app = express()
 
-const server = http.createServer((req, res) =>{
-const file = fs.readFile('index.html', (err, data)=>{
-    if (err) throw err
-    res.write(data)
-    res.end
-}) 
+app.get('/vegan', (req, res) =>{
+    res.send('Vegan recepies')
 })
 
-server.listen(8000)
-console.log("SERVER IS WORKING!")
+
+app.listen(3000, () =>{
+    console.log(`It's my express app`)
+})
+
