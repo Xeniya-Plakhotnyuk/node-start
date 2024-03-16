@@ -5,8 +5,8 @@
     "touch-for-windows": "^1.0.5"
   },
   "scripts": {
-   "start": "node index",
-   "dev": "nodemon index"
+   "start": "node server",
+   "dev": "nodemon server"
   },
   "name": "start",
   "version": "1.0.0",
