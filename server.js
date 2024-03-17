@@ -19,6 +19,10 @@
 const express = require('express')
 const app = express()
 const items = require('./data.js')
+const bodyParser = require('body-parser')
+
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
 
 app.get('/items', (req, res) =>{
     res.json(items)
@@ -30,9 +34,9 @@ app.post("/items", (req, res) => {
     id: req.body.id,
     price: req.body.price,
   }
-  items.push()
+  items.push(newItem)
+  res.json(items)
 })
-
 
 
 app.listen(4000, () =>{
