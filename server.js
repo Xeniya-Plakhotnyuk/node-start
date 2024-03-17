@@ -38,6 +38,10 @@ app.post("/items", (req, res) => {
   res.json(items)
 })
 
+app.delete("/items:name", (req, res) =>{
+
+})
+
 
 app.listen(4000, () =>{
     console.log('My port is open at 4000...')
